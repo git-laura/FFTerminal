@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FindYourFriend</string>
+
+    <!-- LoginActivity-->
+    <string name="authenticating_text">Autenticando...</string>
+    <string name="login_failed_text">Login failed</string>
+    <string name="email_error_text">enter a valid email address</string>
+    <string name="password_error_text">between 4 and 10 alphanumeric characters</string>
+</resources>

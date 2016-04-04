@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FindYourFriend</string>
+
+    <!-- LoginActivity-->
+    <string name="authenticating_text">Authenticating...</string>
+
+
+</resources>

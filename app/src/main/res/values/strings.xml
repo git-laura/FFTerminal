@@ -3,7 +3,21 @@
     <string name="app_name">FindYourFriend</string>
 
     <!-- LoginActivity-->
-    <string name="authenticating_text">Authenticating...</string>
+    <string name="authenticating">Authenticating...</string>
 
+    <!-- validation errors -->
+    <string name="error_login_failed">Login failed</string>
+    <string name="error_email">Enter a valid email address</string>
+    <string name="error_password">Password incorrect between 4 and 10 alphanumeric characters)</string>
+    <string name="error_password_min_char">At least 3 characters</string>
 
+    <!-- activity_signup -->
+    <string name="create_account">Create Account</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="login">LOGIN</string>
+
+    <string name="already_member">Already a member? Login</string>
+    <string name="no_account_yet">No account yet? Create one</string>
 </resources>

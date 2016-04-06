@@ -22,6 +22,8 @@
 
         <item name="colorButtonNormal">@color/primary_dark</item>
         <item name="android:colorButtonNormal">@color/primary_dark</item>
+        <item name="android:windowActionBar">false</item>
+
     </style>
 
     <style name="AppTheme.Dark.Dialog" parent="Theme.AppCompat.Dialog">

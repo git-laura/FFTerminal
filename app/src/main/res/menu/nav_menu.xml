@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:checked="true"
+            android:icon="@drawable/ic_place"
+            android:title="@string/map" />
+        <item
+            android:id="@+id/nav_facturas"
+            android:icon="@drawable/ic_format_list_bulleted"
+            android:title="@string/friends_list" />
+
+        <!-- Sección de configuración -->
+        <item
+            android:id="@+id/configuration_section"
+            android:title="@string/configuration">
+            <menu>
+                <item
+                    android:id="@+id/nav_log_out"
+                    android:icon="@drawable/ic_exit_to_app"
+                    android:title="@string/close_session" />
+            </menu>
+        </item>
+    </group>
+
+</menu>

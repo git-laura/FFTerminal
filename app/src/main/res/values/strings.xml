@@ -20,4 +20,10 @@
 
     <string name="already_member">Already a member? Login</string>
     <string name="no_account_yet">No account yet? Create one</string>
+
+    <!-- navigator drawer -->
+    <string name="map">Map</string>
+    <string name="friends_list">Friends list</string>
+    <string name="configuration">Configuration</string>
+    <string name="close_session">Close session</string>
 </resources>

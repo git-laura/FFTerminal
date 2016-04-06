@@ -20,4 +20,10 @@
 
     <string name="already_member">¿Ya tienes cuenta? ¡Entra!</string>
     <string name="no_account_yet">¿No tienes cuenta aún? ¡Créate una!</string>
+
+    <!-- navigator drawer -->
+    <string name="map">Mapa</string>
+    <string name="friends_list">Lista de amigos</string>
+    <string name="configuration">Configuración</string>
+    <string name="close_session">Cerrar la sesión</string>
 </resources>

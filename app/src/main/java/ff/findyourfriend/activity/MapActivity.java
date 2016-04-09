@@ -48,7 +48,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         ReadCoordAsyncTask CoordRefreshThraed = new ReadCoordAsyncTask(updaterListener);
         CoordRefreshThraed.execute();
     }
-
+    
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.

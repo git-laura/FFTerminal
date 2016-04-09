@@ -52,10 +52,11 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void login() {
-        if (!validate()) {
-            onLoginFailed();
-            return;
-        }
+        // TODO: descomentar para hacer la validacion en el login
+        // if (!validate()) {
+        //    onLoginFailed();
+        //    return;
+        //}
 
         loginButton.setEnabled(false);
 
@@ -86,7 +87,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_SIGNUP) {
             if (resultCode == RESULT_OK) {
-
                 // TODO: Implement successful signup logic here
                 // By default we just finish the Activity and log them in automatically
                 this.finish();
@@ -107,7 +107,6 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginFailed() {
         Toast.makeText(getBaseContext(), R.string.error_login_failed, Toast.LENGTH_LONG).show();
-
         loginButton.setEnabled(true);
     }
 

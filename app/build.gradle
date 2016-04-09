@@ -30,4 +30,7 @@ dependencies {
     //navigation view
     compile 'com.android.support:design:23.1.1'
     compile 'de.hdodenhof:circleimageview:1.3.0'
+
+    // Goolge maps
+    compile 'com.google.android.gms:play-services:8.4.0'
 }

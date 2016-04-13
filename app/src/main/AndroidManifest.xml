@@ -1,7 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ff.findyourfriend">
 
+    <!-- permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -22,6 +24,6 @@
         <activity android:name=".activity.MapActivity" android:theme="@style/AppTheme.Dark" />
         <activity android:name=".activity.FriendsListActivity" android:theme="@style/AppTheme.Dark" />
 
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/google_maps_key"/>
     </application>
-
 </manifest>

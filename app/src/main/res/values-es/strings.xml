@@ -26,4 +26,14 @@
     <string name="friends_list">Lista de amigos</string>
     <string name="configuration">Configuración</string>
     <string name="close_session">Cerrar la sesión</string>
+
+    <!-- main activity -->
+        <!-- change view mode -->
+        <string name="map_view_mode_btn">MODO MAPA</string>
+        <string name="map_view_mode_title_text">Seleccionar el modo de visualización</string>
+        <string name="mode_normal">Calles</string>
+        <string name="mode_satellite">Satélite</string>
+        <string name="mode_terrain">Terreno</string>
+        <string name="mode_hybrid">Híbrido</string>
+
 </resources>

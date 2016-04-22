@@ -32,6 +32,6 @@ public class ReadCoordAsyncTask extends AsyncTask<String, Coordenate, Boolean> {
     @Override
     protected void onProgressUpdate(Coordenate... coordenates) {
         super.onProgressUpdate(coordenates);
-        mListener.updateCoord(coordenates[0]);
+        mListener.updateCoordenate(coordenates[0]);
     }
 }

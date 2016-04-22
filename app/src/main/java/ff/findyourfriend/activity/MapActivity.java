@@ -86,9 +86,9 @@ public class MapActivity extends AppCompatActivity  implements OnMapReadyCallbac
 
         updaterListener = new UpdaterListener() {
             @Override
-            public void updateCoord(Coordenate coordenate) {
+            public void updateCoordenate(Coordenate coordenate) {
                 LatLng my_position = new LatLng(coordenate.getLatitude(), coordenate.getLongitude());
-                Log.d("Updating Coord", coordenate.toString());
+                Log.d(this.getClass().toString(), "Updating Coordenate: " + coordenate.toString());
                 if (googleMap != null) {
                     googleMap.clear();
                     googleMap.addMarker(new MarkerOptions().position(my_position).title(coordenate.toString()));

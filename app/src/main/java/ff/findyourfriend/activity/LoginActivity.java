@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setEnabled(false);
 
         final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
-                R.style.AppTheme_Dark_Dialog);
+                R.style.AppTheme_Transparent_Dialog);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage(getResources().getString(R.string.authenticating));
         progressDialog.show();
@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
                 // By default we just finish the Activity and log them in automatically
 
                 // this.finish();
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, MapActivity.class);
                 startActivity(intent);
             }
         }
@@ -99,14 +99,14 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        // disable going back to the MainActivity
+        // disable going back to the MapActivity
         moveTaskToBack(true);
     }
 
     public void onLoginSuccess() {
         loginButton.setEnabled(true);
         // finish();
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MapActivity.class);
         startActivity(intent);
     }
 

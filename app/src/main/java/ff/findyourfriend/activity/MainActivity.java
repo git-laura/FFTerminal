@@ -66,10 +66,6 @@ public class MainActivity extends AppCompatActivity  implements OnMapReadyCallba
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Login activity
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-
         // Navigator view
         setContentView(R.layout.activity_main);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);

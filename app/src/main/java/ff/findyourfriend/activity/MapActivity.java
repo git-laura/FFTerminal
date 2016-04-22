@@ -37,6 +37,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import ff.findyourfriend.R;
 import ff.findyourfriend.asyncTask.ReadCoordAsyncTask;
 import ff.findyourfriend.interfaces.UpdaterListener;
+import ff.findyourfriend.model.Coordenate;
 
 
 public class MapActivity extends AppCompatActivity  implements OnMapReadyCallback, android.location.LocationListener{
@@ -85,13 +86,12 @@ public class MapActivity extends AppCompatActivity  implements OnMapReadyCallbac
 
         updaterListener = new UpdaterListener() {
             @Override
-            public void updateCoord(final double value) {
-                lat = value;
-                LatLng my_position = new LatLng(lat, -3.811728);
-                Log.d("Updating Coord", String.valueOf(value));
+            public void updateCoord(Coordenate coordenate) {
+                LatLng my_position = new LatLng(coordenate.getLatitude(), coordenate.getLongitude());
+                Log.d("Updating Coord", coordenate.toString());
                 if (googleMap != null) {
                     googleMap.clear();
-                    googleMap.addMarker(new MarkerOptions().position(my_position).title("Marker in my_position"));
+                    googleMap.addMarker(new MarkerOptions().position(my_position).title(coordenate.toString()));
                     if (ActivityCompat.checkSelfPermission(
                             getBaseContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
                             ActivityCompat.checkSelfPermission(getBaseContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

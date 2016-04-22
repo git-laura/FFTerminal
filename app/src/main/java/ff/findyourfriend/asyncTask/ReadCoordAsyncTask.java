@@ -3,13 +3,14 @@ package ff.findyourfriend.asyncTask;
 import android.os.AsyncTask;
 
 import ff.findyourfriend.interfaces.UpdaterListener;
+import ff.findyourfriend.model.Coordenate;
 
 /**
  * Created by laura on 09/04/2016.
  */
-public class ReadCoordAsyncTask extends AsyncTask<String, Double, Boolean> {
+public class ReadCoordAsyncTask extends AsyncTask<String, Coordenate, Boolean> {
     UpdaterListener mListener;
-    double coord = 40.300280;
+    Coordenate coordenate = new Coordenate(40.279841, -3.787929);
     public ReadCoordAsyncTask(UpdaterListener mCallBackListener){
         mListener = mCallBackListener;
     }
@@ -17,8 +18,8 @@ public class ReadCoordAsyncTask extends AsyncTask<String, Double, Boolean> {
     @Override
     protected Boolean doInBackground(String... params) {
         while(true) {
-            coord += 0.1 ;
-            publishProgress(coord);
+            coordenate.setLatitude(coordenate.getLatitude() + 0.1);
+            publishProgress(coordenate);
             try {
                 synchronized (this) {
                     wait(1000);
@@ -29,8 +30,8 @@ public class ReadCoordAsyncTask extends AsyncTask<String, Double, Boolean> {
     }
 
     @Override
-    protected void onProgressUpdate(Double... values) {
-        super.onProgressUpdate(values);
-        mListener.updateCoord(values[0]);
+    protected void onProgressUpdate(Coordenate... coordenates) {
+        super.onProgressUpdate(coordenates);
+        mListener.updateCoord(coordenates[0]);
     }
 }

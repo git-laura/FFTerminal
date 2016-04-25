@@ -25,6 +25,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -38,6 +39,7 @@ import ff.findyourfriend.R;
 import ff.findyourfriend.asyncTask.ReadCoordAsyncTask;
 import ff.findyourfriend.interfaces.UpdaterListener;
 import ff.findyourfriend.model.Coordenate;
+import ff.findyourfriend.util.CacheController;
 
 
 public class MapActivity extends AppCompatActivity  implements OnMapReadyCallback, android.location.LocationListener{
@@ -78,6 +80,10 @@ public class MapActivity extends AppCompatActivity  implements OnMapReadyCallbac
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+
+        // Asignar el nombre de usuario al navigator view
+        TextView usernameText = (TextView) navigationView.getHeaderView(0).findViewById(R.id.username);
+        usernameText.setText(CacheController.getUsername(this));
 
         // Map
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()

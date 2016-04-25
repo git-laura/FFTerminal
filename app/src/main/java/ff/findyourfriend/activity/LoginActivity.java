@@ -17,6 +17,7 @@ import android.widget.Toast;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import ff.findyourfriend.R;
+import ff.findyourfriend.util.CacheController;
 
 public class LoginActivity extends AppCompatActivity {
     private static final int REQUEST_SIGNUP = 0;
@@ -52,12 +53,11 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void login() {
-        // TODO: descomentar para hacer la validacion en el login
+        // TODO: descomentar para hacer la validación en el login
         // if (!validate()) {
         //    onLoginFailed();
         //    return;
         //}
-
         loginButton.setEnabled(false);
 
         final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
@@ -68,6 +68,9 @@ public class LoginActivity extends AppCompatActivity {
 
         String email = emailInput.getText().toString();
         String password = passwordInput.getText().toString();
+
+        CacheController.setUsername(email, this);
+        CacheController.setPassword(password, this);
 
         // TODO: Implement your own authentication logic here.
 
